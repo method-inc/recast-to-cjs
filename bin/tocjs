@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var transformer = require('../');
+
+program
+  .version(require('../package.json').version)
+  .usage('[options] <file or glob...>')
+  .option('-d, --dryrun', 'Only log the transformation')
+
+program.parse(process.argv);
+
+if (!program.args.length) program.help();
+
+var files = program.args;
+if (!files) {
+  console.error('file glob required');
+  process.exit(1);
+}
+
+// DEBUG
+program.dryrun = true;
+
+transformer(files[0], {dryrun: program.dryrun});
+

@@ -1,0 +1,28 @@
+{
+  "name": "tocjs",
+  "version": "1.0.0",
+  "description": "Script to transfrom a file from AMD to CJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "bin": {
+    "tocjs": "bin/tocjs"
+  },
+  "keywords": [
+    "amd",
+    "cjs",
+    "converter",
+    "recast"
+  ],
+  "author": "Dustan Kasten <dustan@skookum.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.5.1",
+    "glob": "^4.3.1",
+    "recast": "^0.9.11"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
