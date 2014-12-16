@@ -1,6 +1,5 @@
 /*global it*/
 var assert = require('assert');
-var exec = require('child_process').exec;
 var tocjs = require('..');
 var fs = require('fs');
 var path = require('path');

@@ -4,7 +4,7 @@
   "description": "Script to transfrom a file from AMD to CJS.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/index.js"
+    "test": "mocha test/*.js"
   },
   "bin": {
     "tocjs": "bin/tocjs"
