@@ -20,6 +20,4 @@ describe('should transform', function(){
       });
     })
   });
-})
-
-
+});
