@@ -1,4 +1,4 @@
 define(function() {
-  return 'identity';
+  return 'Hello world';
 });
 
