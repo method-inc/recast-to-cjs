@@ -1,3 +1,4 @@
+/** Top level comments shouldn’t be duplicated. */
 {
   module.exports = 'hello world';
 }

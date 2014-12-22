@@ -1,3 +1,4 @@
+/** Top level comments shouldn’t be duplicated. */
 define(function() {
   return 'hello world';
 });
