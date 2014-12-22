@@ -7,6 +7,7 @@ program
   .version(require('../package.json').version)
   .usage('[options] <file or glob...>')
   .option('-d, --dryrun', 'Only log the transformation')
+  .option('-t, --transformer <type>', 'Transformation to apply. [identity | amdToCjs]');
 
 program.parse(process.argv);
 
@@ -19,7 +20,9 @@ if (!files) {
 }
 
 // DEBUG
-program.dryrun = true;
 
-transformer(files[0], {dryrun: program.dryrun});
+transformer(files, {
+  dryrun: program.dryrun,
+  transformer: program.transformer
+});
 
