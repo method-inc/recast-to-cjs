@@ -11,14 +11,14 @@ var generators = require('../lib/generators');
 describe('generating ASTs', function(){
   describe('require', function() {
     it('should generate with a variable, module syntax', function() {
-      var output = generators.require('React', 'react/addons');
+      var output = generators.require('react/addons', 'React');
       var expected = 'var React = require("react/addons");';
       assert.equal(recast.print(output).code, expected);
     });
 
     it('should generate with a singular argument', function() {
       var output = generators.require('React');
-      var expected = 'var React = require("React");';
+      var expected = 'require("React");';
       assert.equal(recast.print(output).code, expected);
     });
   });
